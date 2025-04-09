@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlantGrowthController : MonoBehaviour
+public class PlantMenuController : MonoBehaviour
 {
-    public GameObject menuPanel;
+    public GameObject menuPanel; // Assign this in the Inspector
 
     public void ShowMenu()
     {
