@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlantMenuController : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     public GameObject menuPanel; // Assign this in the Inspector
 

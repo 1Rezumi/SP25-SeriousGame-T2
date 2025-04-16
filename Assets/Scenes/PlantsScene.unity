@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 25820126}
   - component: {fileID: 25820125}
   - component: {fileID: 25820124}
+  - component: {fileID: 25820127}
   m_Layer: 5
   m_Name: Plot 8
   m_TagString: Untagged
@@ -216,6 +217,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlantGrowthController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &25820125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +267,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25820122}
   m_CullTransparentMesh: 1
+--- !u!114 &25820127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25820122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe859b44e9c0dc42b5c7d8c5aa4692d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantImage: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: e4d94751931d19b4d8b7abe6e0cced52, type: 3}
 --- !u!1 &112712083
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +293,7 @@ GameObject:
   - component: {fileID: 112712087}
   - component: {fileID: 112712086}
   - component: {fileID: 112712085}
+  - component: {fileID: 112712088}
   m_Layer: 5
   m_Name: Plot 3
   m_TagString: Untagged
@@ -348,6 +376,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlantMenuController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &112712086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +426,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112712083}
   m_CullTransparentMesh: 1
+--- !u!114 &112712088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112712083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe859b44e9c0dc42b5c7d8c5aa4692d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantImage: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: e4d94751931d19b4d8b7abe6e0cced52, type: 3}
 --- !u!1 &181492678
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +452,7 @@ GameObject:
   - component: {fileID: 181492682}
   - component: {fileID: 181492681}
   - component: {fileID: 181492680}
+  - component: {fileID: 181492683}
   m_Layer: 5
   m_Name: Plot 5
   m_TagString: Untagged
@@ -480,6 +535,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlantGrowthController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &181492681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,6 +585,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181492678}
   m_CullTransparentMesh: 1
+--- !u!114 &181492683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181492678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe859b44e9c0dc42b5c7d8c5aa4692d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantImage: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: e4d94751931d19b4d8b7abe6e0cced52, type: 3}
 --- !u!1 &200290007
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +692,7 @@ GameObject:
   - component: {fileID: 279880902}
   - component: {fileID: 279880901}
   - component: {fileID: 279880900}
+  - component: {fileID: 279880903}
   m_Layer: 5
   m_Name: Plot 6
   m_TagString: Untagged
@@ -693,6 +775,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlantGrowthController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &279880901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,6 +825,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279880898}
   m_CullTransparentMesh: 1
+--- !u!114 &279880903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279880898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe859b44e9c0dc42b5c7d8c5aa4692d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantImage: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: e4d94751931d19b4d8b7abe6e0cced52, type: 3}
 --- !u!1 &377764865
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +851,7 @@ GameObject:
   - component: {fileID: 377764869}
   - component: {fileID: 377764868}
   - component: {fileID: 377764867}
+  - component: {fileID: 377764870}
   m_Layer: 5
   m_Name: Plot 2
   m_TagString: Untagged
@@ -825,6 +934,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlantMenuController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &377764868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,6 +984,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377764865}
   m_CullTransparentMesh: 1
+--- !u!114 &377764870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377764865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe859b44e9c0dc42b5c7d8c5aa4692d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantImage: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: e4d94751931d19b4d8b7abe6e0cced52, type: 3}
 --- !u!1 &436230086
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,6 +1131,7 @@ GameObject:
   - component: {fileID: 521885454}
   - component: {fileID: 521885453}
   - component: {fileID: 521885452}
+  - component: {fileID: 521885455}
   m_Layer: 5
   m_Name: Plot 7
   m_TagString: Untagged
@@ -1078,6 +1214,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlantGrowthController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &521885453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1116,6 +1264,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521885450}
   m_CullTransparentMesh: 1
+--- !u!114 &521885455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521885450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe859b44e9c0dc42b5c7d8c5aa4692d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantImage: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: e4d94751931d19b4d8b7abe6e0cced52, type: 3}
 --- !u!1 &562195229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,6 +1290,7 @@ GameObject:
   - component: {fileID: 562195233}
   - component: {fileID: 562195232}
   - component: {fileID: 562195231}
+  - component: {fileID: 562195234}
   m_Layer: 5
   m_Name: Plot 10
   m_TagString: Untagged
@@ -1210,6 +1373,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlantGrowthController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &562195232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,6 +1423,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562195229}
   m_CullTransparentMesh: 1
+--- !u!114 &562195234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562195229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe859b44e9c0dc42b5c7d8c5aa4692d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantImage: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: e4d94751931d19b4d8b7abe6e0cced52, type: 3}
 --- !u!1 &620792179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,7 +1735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Space-Crop Here
+  m_text: Corasprout
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
   m_sharedMaterial: {fileID: 6473254644668201671, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
@@ -1680,7 +1869,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Space-Crop Here
+  m_text: Glords
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
   m_sharedMaterial: {fileID: 6473254644668201671, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
@@ -1769,6 +1958,7 @@ GameObject:
   - component: {fileID: 1219406971}
   - component: {fileID: 1219406970}
   - component: {fileID: 1219406969}
+  - component: {fileID: 1219406972}
   m_Layer: 5
   m_Name: Plot 4
   m_TagString: Untagged
@@ -1851,6 +2041,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlantGrowthController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1219406970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1889,6 +2091,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219406967}
   m_CullTransparentMesh: 1
+--- !u!114 &1219406972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219406967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe859b44e9c0dc42b5c7d8c5aa4692d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantImage: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: e4d94751931d19b4d8b7abe6e0cced52, type: 3}
 --- !u!1 &1261706724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,7 +2239,7 @@ GameObject:
   - component: {fileID: 1263498922}
   - component: {fileID: 1263498921}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: Sbeets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2092,7 +2308,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1263498922}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1281516551}
+        m_TargetAssemblyTypeName: PlantMenuController, Assembly-CSharp
+        m_MethodName: SelectPlant
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Sbeets
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1263498922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2188,7 +2416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Space-Crop Here
+  m_text: Duneroot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
   m_sharedMaterial: {fileID: 6473254644668201671, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
@@ -2397,6 +2625,34 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.589
       objectReference: {fileID: 0}
+    - target: {fileID: 5905504079946683586, guid: 39295e09cda472b449cdce8f78bc7bec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905504079946683586, guid: 39295e09cda472b449cdce8f78bc7bec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905504079946683586, guid: 39295e09cda472b449cdce8f78bc7bec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905504079946683586, guid: 39295e09cda472b449cdce8f78bc7bec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905504079946683586, guid: 39295e09cda472b449cdce8f78bc7bec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GrowAllPlants
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905504079946683586, guid: 39295e09cda472b449cdce8f78bc7bec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlantManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905504079946683586, guid: 39295e09cda472b449cdce8f78bc7bec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6493253901175668495, guid: 39295e09cda472b449cdce8f78bc7bec, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2595,6 +2851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1281516550}
   - component: {fileID: 1281516549}
+  - component: {fileID: 1281516551}
   m_Layer: 0
   m_Name: UiManager
   m_TagString: Untagged
@@ -2630,6 +2887,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1281516551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281516548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a7b5e7737cf0d4e8c0f4bbf8835137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantSelectionPanel: {fileID: 200290007}
+  spaceCarrotSprite: {fileID: 21300000, guid: a6421f6785aa60b4da07c32367de299a, type: 3}
+  sbeetsSprite: {fileID: 21300000, guid: d450d175b28d3194492ca8c06a6a1ec4, type: 3}
 --- !u!1 &1292392327
 GameObject:
   m_ObjectHideFlags: 0
@@ -3027,6 +3299,7 @@ GameObject:
   - component: {fileID: 1684327204}
   - component: {fileID: 1684327203}
   - component: {fileID: 1684327202}
+  - component: {fileID: 1684327205}
   m_Layer: 5
   m_Name: Plot 9
   m_TagString: Untagged
@@ -3109,6 +3382,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlantGrowthController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1684327203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3147,6 +3432,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684327200}
   m_CullTransparentMesh: 1
+--- !u!114 &1684327205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684327200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe859b44e9c0dc42b5c7d8c5aa4692d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantImage: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: e4d94751931d19b4d8b7abe6e0cced52, type: 3}
 --- !u!114 &1735042315 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7969786246888526091, guid: 39295e09cda472b449cdce8f78bc7bec, type: 3}
@@ -3242,7 +3541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Space-Crop Here
+  m_text: Gungi Fruit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
   m_sharedMaterial: {fileID: 6473254644668201671, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
@@ -3497,6 +3796,7 @@ GameObject:
   - component: {fileID: 2041631622}
   - component: {fileID: 2041631621}
   - component: {fileID: 2041631620}
+  - component: {fileID: 2041631624}
   m_Layer: 5
   m_Name: Plot 1
   m_TagString: Untagged
@@ -3579,6 +3879,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlantMenuController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2041631621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3617,6 +3929,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041631618}
   m_CullTransparentMesh: 1
+--- !u!114 &2041631624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041631618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe859b44e9c0dc42b5c7d8c5aa4692d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantImage: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: e4d94751931d19b4d8b7abe6e0cced52, type: 3}
 --- !u!1 &2057614988
 GameObject:
   m_ObjectHideFlags: 0
@@ -3674,7 +4000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Space-Crop Here
+  m_text: Nectons
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
   m_sharedMaterial: {fileID: 6473254644668201671, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
@@ -3808,7 +4134,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Space-Crop Here
+  m_text: Skrelp
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
   m_sharedMaterial: {fileID: 6473254644668201671, guid: bca7435dbc839444f8a03177c0be856c, type: 2}
