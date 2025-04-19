@@ -782,6 +782,10 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.589
       objectReference: {fileID: 0}
+    - target: {fileID: 206021125714071237, guid: 39295e09cda472b449cdce8f78bc7bec, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3162036928153706074, guid: 39295e09cda472b449cdce8f78bc7bec, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
       value: 0
