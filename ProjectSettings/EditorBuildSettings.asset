@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/PlanetsScene.unity
+    guid: 1bdc03f1ff7646549939174d96eb083f
+  - enabled: 1
+    path: Assets/Scenes/PlantsScene.unity
+    guid: e61eb75d7ee8b7f4b850d01a9b9923d5
+  - enabled: 1
+    path: Assets/Scenes/ShippingScene.unity
+    guid: 54180b9ca7f9c274482518611a258083
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: faf7373b64ca6574c909b2426eb1846d
   m_configObjects: {}
