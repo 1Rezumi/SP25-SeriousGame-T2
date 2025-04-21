@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 933930}
   - component: {fileID: 933929}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Shipment1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 329, y: 203}
+  m_AnchoredPosition: {x: 329, y: 196}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &933929
@@ -481,57 +481,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69092626}
   m_CullTransparentMesh: 1
---- !u!1 &203552421
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 203552423}
-  - component: {fileID: 203552422}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &203552422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203552421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1af515832aea3ec49ad2346aba1c2360, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonMeterPairs:
-  - meterScript: {fileID: 0}
-    actionButton: {fileID: 0}
-  - meterScript: {fileID: 0}
-    actionButton: {fileID: 0}
-  - meterScript: {fileID: 0}
-    actionButton: {fileID: 0}
---- !u!4 &203552423
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203552421}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 424.1826, y: 262.0279, z: 0.42915702}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214119317
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +493,7 @@ GameObject:
   - component: {fileID: 214119320}
   - component: {fileID: 214119319}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Shipment2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,7 +515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 329, y: 85}
+  m_AnchoredPosition: {x: 329, y: 83}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &214119319
@@ -1216,7 +1165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 177, y: 201}
+  m_AnchoredPosition: {x: 203, y: 201}
   m_SizeDelta: {x: 32.3604, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &549057751
@@ -1313,12 +1262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1ad3b0336009642b1a06ccb9794735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cropKey1: Crop1
-  requiredAmount1: 50
-  cropKey2: Crop2
-  requiredAmount2: 25
-  progressText1: {fileID: 697082786}
-  progressText2: {fileID: 1676914016}
+  shipmentIndex: 0
   button: {fileID: 549057751}
 --- !u!1 &604576498
 GameObject:
@@ -1441,7 +1385,7 @@ GameObject:
   - component: {fileID: 697082787}
   - component: {fileID: 697082786}
   m_Layer: 5
-  m_Name: Speets
+  m_Name: Speets1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1811,7 +1755,6 @@ GameObject:
   - component: {fileID: 718016315}
   - component: {fileID: 718016314}
   - component: {fileID: 718016313}
-  - component: {fileID: 718016312}
   m_Layer: 5
   m_Name: Planet 2 Crop Requirements
   m_TagString: Untagged
@@ -1819,24 +1762,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &718016312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718016311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc6cbc2b0c7d824994a920239f5070b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crop1Text: {fileID: 929907266}
-  crop2Text: {fileID: 1058712798}
-  cropKey1: Crop2
-  cropKey2: Crop3
-  requiredAmount1: 28
-  requiredAmount2: 14
 --- !u!114 &718016313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1933,7 +1858,7 @@ GameObject:
   - component: {fileID: 770138518}
   - component: {fileID: 770138517}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Shipment3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2084,22 +2009,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57af80bc9004f547bf071378fb92291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipmentRequirements:
+  shipments:
   - cropKey1: Crop1
-    cropKey2: Crop2
     requiredAmount1: 50
+    progressText1: {fileID: 697082786}
+    cropKey2: Crop2
     requiredAmount2: 25
+    progressText2: {fileID: 1676914016}
+    completionText: {fileID: 933929}
   - cropKey1: Crop2
-    cropKey2: Crop3
     requiredAmount1: 28
-    requiredAmount2: 14
-  - cropKey1: Crop1
+    progressText1: {fileID: 929907266}
     cropKey2: Crop3
+    requiredAmount2: 14
+    progressText2: {fileID: 1058712798}
+    completionText: {fileID: 214119319}
+  - cropKey1: Crop1
     requiredAmount1: 40
+    progressText1: {fileID: 1909760977}
+    cropKey2: Crop3
     requiredAmount2: 15
-  progressText1: {fileID: 933929}
-  progressText2: {fileID: 214119319}
-  progressText3: {fileID: 770138517}
+    progressText2: {fileID: 1854721658}
+    completionText: {fileID: 770138517}
 --- !u!4 &780475149
 Transform:
   m_ObjectHideFlags: 0
@@ -2185,11 +2116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5368201968280636018, guid: cf78f8b6185fc7b4a9a35bfaee119c35, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 18.5
+      value: 16.1
       objectReference: {fileID: 0}
     - target: {fileID: 5368201968280636018, guid: cf78f8b6185fc7b4a9a35bfaee119c35, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -19
+      value: -136.2
       objectReference: {fileID: 0}
     - target: {fileID: 5368201968280636018, guid: cf78f8b6185fc7b4a9a35bfaee119c35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2229,7 +2160,6 @@ GameObject:
   - component: {fileID: 911906989}
   - component: {fileID: 911906988}
   - component: {fileID: 911906987}
-  - component: {fileID: 911906991}
   m_Layer: 5
   m_Name: Planet 1 Crop Requirements
   m_TagString: Untagged
@@ -2321,24 +2251,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &911906991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911906986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc6cbc2b0c7d824994a920239f5070b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crop1Text: {fileID: 697082786}
-  crop2Text: {fileID: 1676914016}
-  cropKey1: Crop1
-  cropKey2: Crop2
-  requiredAmount1: 50
-  requiredAmount2: 25
 --- !u!1 &923046821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,6 +2263,7 @@ GameObject:
   - component: {fileID: 923046824}
   - component: {fileID: 923046823}
   - component: {fileID: 923046822}
+  - component: {fileID: 923046826}
   m_Layer: 5
   m_Name: ShipmentTracker
   m_TagString: Untagged
@@ -2443,6 +2356,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &923046826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923046821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ab9d833287ab84691f2102016a765b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressText1: {fileID: 933929}
+  progressText2: {fileID: 214119319}
+  completionText: {fileID: 770138517}
 --- !u!1 &929907265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,7 +2383,7 @@ GameObject:
   - component: {fileID: 929907267}
   - component: {fileID: 929907266}
   m_Layer: 5
-  m_Name: Skelp
+  m_Name: Skelp2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2589,7 +2517,7 @@ GameObject:
   - component: {fileID: 1058712799}
   - component: {fileID: 1058712798}
   m_Layer: 5
-  m_Name: Space Corn
+  m_Name: Space Corn1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2708,8 +2636,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: 65}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 48.015472, y: 65}
+  m_SizeDelta: {x: 234.0309, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1059960975
 GameObject:
@@ -3480,7 +3408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 177.00003, y: 95.000015}
+  m_AnchoredPosition: {x: 203.00003, y: 95.000015}
   m_SizeDelta: {x: 32.3604, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1391953111
@@ -3577,12 +3505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1ad3b0336009642b1a06ccb9794735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cropKey1: Crop2
-  requiredAmount1: 28
-  cropKey2: Crop3
-  requiredAmount2: 14
-  progressText1: {fileID: 929907266}
-  progressText2: {fileID: 1058712798}
+  shipmentIndex: 1
   button: {fileID: 1391953111}
 --- !u!1001 &1397546209
 PrefabInstance:
@@ -3654,11 +3577,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5488486747546525617, guid: 7b360edfe70e5b646bd292e73abd5496, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -18.5
+      value: -17.3
       objectReference: {fileID: 0}
     - target: {fileID: 5488486747546525617, guid: 7b360edfe70e5b646bd292e73abd5496, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -118
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 5488486747546525617, guid: 7b360edfe70e5b646bd292e73abd5496, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3863,7 +3786,7 @@ GameObject:
   - component: {fileID: 1676914017}
   - component: {fileID: 1676914016}
   m_Layer: 5
-  m_Name: Skelp
+  m_Name: Skelp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4352,7 +4275,7 @@ GameObject:
   - component: {fileID: 1854721659}
   - component: {fileID: 1854721658}
   m_Layer: 5
-  m_Name: Space Corn
+  m_Name: Space Corn2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4441,7 +4364,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -17.698853, w: 21.368286}
+  m_margin: {x: 0, y: 0, z: -62.263184, w: 21.368286}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4471,8 +4394,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: -50}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 50.041107, y: -50}
+  m_SizeDelta: {x: 238.0822, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1909760976
 GameObject:
@@ -4486,7 +4409,7 @@ GameObject:
   - component: {fileID: 1909760978}
   - component: {fileID: 1909760977}
   m_Layer: 5
-  m_Name: Speets
+  m_Name: Speets2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4644,7 +4567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 177.80002, y: -19.299982}
+  m_AnchoredPosition: {x: 202.99997, y: -14.999994}
   m_SizeDelta: {x: 32.3604, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028173049
@@ -4741,12 +4664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1ad3b0336009642b1a06ccb9794735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cropKey1: Crop1
-  requiredAmount1: 40
-  cropKey2: Crop3
-  requiredAmount2: 15
-  progressText1: {fileID: 1909760977}
-  progressText2: {fileID: 1854721658}
+  shipmentIndex: 2
   button: {fileID: 2028173049}
 --- !u!1 &2096702820
 GameObject:
@@ -5122,7 +5040,6 @@ GameObject:
   - component: {fileID: 2146256330}
   - component: {fileID: 2146256329}
   - component: {fileID: 2146256328}
-  - component: {fileID: 2146256327}
   m_Layer: 5
   m_Name: Planet 3 Crop Requirements
   m_TagString: Untagged
@@ -5130,24 +5047,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2146256327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146256326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc6cbc2b0c7d824994a920239f5070b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crop1Text: {fileID: 1909760977}
-  crop2Text: {fileID: 1854721658}
-  cropKey1: Crop1
-  cropKey2: Crop3
-  requiredAmount1: 40
-  requiredAmount2: 15
 --- !u!114 &2146256328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5247,7 +5146,6 @@ SceneRoots:
   - {fileID: 333326460}
   - {fileID: 35260250}
   - {fileID: 1853210735}
-  - {fileID: 203552423}
   - {fileID: 1320104288}
   - {fileID: 780475149}
   - {fileID: 604576502}

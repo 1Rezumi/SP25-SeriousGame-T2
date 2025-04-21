@@ -13,7 +13,7 @@ public class CounterDisplay : MonoBehaviour
     {
         if (!CounterData.GetAllKeys().Contains(counterKey))
         {
-            CounterData.SetCounter(counterKey, 0); // Only if you really want to force init
+            CounterData.SetCounter(counterKey, 0);
         }
         CounterData.SetLabel(counterKey, label);
         UpdateCounter();

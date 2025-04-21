@@ -1,108 +1,172 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; // For TMP_Text
+using UnityEngine.SceneManagement;
+using TMPro;
 
 [System.Serializable]
-public class ShipmentRequirement
+public class Shipment
 {
-    public string cropKey1; // Key for the first crop in the pair
-    public string cropKey2; // Key for the second crop in the pair
-    public int requiredAmount1; // Amount required for the first crop
-    public int requiredAmount2; // Amount required for the second crop
+    public string cropKey1;
+    public int requiredAmount1;
+    public TextMeshProUGUI progressText1;
+
+    public string cropKey2;
+    public int requiredAmount2;
+    public TextMeshProUGUI progressText2;
+
+    public TextMeshProUGUI completionText;
+
+    public bool IsCompleted(int index)
+    {
+        (int p1, int p2) = CounterData.GetShipmentProgress(index);
+        return p1 >= requiredAmount1 && p2 >= requiredAmount2;
+    }
+
+    public bool ShipmentSent => completionText != null && completionText.text == "1/1";
 }
 
 public class ShipmentManager : MonoBehaviour
 {
-    public List<ShipmentRequirement> shipmentRequirements; // List of shipment requirements
+    public List<Shipment> shipments;
 
-    // UI Text components for progress
-    public TMP_Text progressText1;
-    public TMP_Text progressText2;
-    public TMP_Text progressText3;
-
-    // Track shipment completions
-    private bool[] shipmentCompleted = new bool[3]; // Assuming 3 shipments
-
-    void Start()
+    private void Awake()
     {
-        // Initialize the shipment status as false (not completed)
-        for (int i = 0; i < shipmentCompleted.Length; i++)
-        {
-            shipmentCompleted[i] = false;
-        }
-
-        // Initialize UI text to 0/1 initially
-        if (progressText1 != null) progressText1.text = "0/1";
-        if (progressText2 != null) progressText2.text = "0/1";
-        if (progressText3 != null) progressText3.text = "0/1";
+        SetDefaultLabels();
     }
 
-    public void TryShip(int shipmentIndex)
+    private void Start()
     {
-        // Ensure we have enough crops for the shipment
-        ShipmentRequirement req = shipmentRequirements[shipmentIndex];
+        StartCoroutine(DelayedUIUpdate());
+    }
 
-        // Check if we have enough crops for both crop1 and crop2
-        if (CounterData.GetCounter(req.cropKey1) < req.requiredAmount1 || CounterData.GetCounter(req.cropKey2) < req.requiredAmount2)
+    private IEnumerator DelayedUIUpdate()
+    {
+        yield return null;
+        UpdateAllUI();
+    }
+
+    private void SetDefaultLabels()
+    {
+        CounterData.SetLabel("Crop1", "Speets");
+        CounterData.SetLabel("Crop2", "Skelp");
+        CounterData.SetLabel("Crop3", "Brussel");
+    }
+
+    public void TrySubmitShipment(int index)
+    {
+        if (index < 0 || index >= shipments.Count) return;
+
+        Shipment shipment = shipments[index];
+        if (shipment.IsCompleted(index) || shipment.ShipmentSent) return;
+
+        int available1 = CounterData.GetCounter(shipment.cropKey1);
+        int available2 = CounterData.GetCounter(shipment.cropKey2);
+
+        (int current1, int current2) = CounterData.GetShipmentProgress(index);
+
+        int needed1 = Mathf.Max(0, shipment.requiredAmount1 - current1);
+        int needed2 = Mathf.Max(0, shipment.requiredAmount2 - current2);
+
+        int take1 = Mathf.Min(available1, needed1);
+        int take2 = Mathf.Min(available2, needed2);
+
+        int newProgress1 = Mathf.Min(current1 + take1, shipment.requiredAmount1);
+        int newProgress2 = Mathf.Min(current2 + take2, shipment.requiredAmount2);
+
+        CounterData.AddToCounter(shipment.cropKey1, -take1);
+        CounterData.AddToCounter(shipment.cropKey2, -take2);
+
+        CounterData.SetShipmentProgress(index, newProgress1, newProgress2);
+
+        UpdateShipmentUI(index, shipment);
+
+        if (shipment.IsCompleted(index))
         {
-            Debug.Log($"Not enough of {CounterData.GetLabel(req.cropKey1)} and {CounterData.GetLabel(req.cropKey2)} to ship!");
-            return;
+            CounterData.MarkShipmentCompleted(index);
+            shipment.completionText.text = "<color=#00FF00>1/1</color>";
         }
 
-        // Deduct the crops
-        CounterData.AddToCounter(req.cropKey1, -req.requiredAmount1);
-        CounterData.AddToCounter(req.cropKey2, -req.requiredAmount2);
-
-        // Mark shipment as completed
-        shipmentCompleted[shipmentIndex] = true;
-
-        // Update the UI to reflect the shipment status
-        UpdateProgressTexts(shipmentIndex);
-
-        // Check if all shipments are completed
         if (AllShipmentsCompleted())
         {
-            EndGame();
+            Debug.Log("All shipments complete! Ending game.");
+            StartCoroutine(EndGameSequence());
+        }
+
+        CounterData.CounterDisplayUpdater.RefreshAllDisplays();
+        UpdateAllUI();
+    }
+
+    public void DevFillShipments()
+    {
+        foreach (var shipment in shipments)
+        {
+            int available1 = CounterData.GetCounter(shipment.cropKey1);
+            int available2 = CounterData.GetCounter(shipment.cropKey2);
+
+            int toAdd1 = Mathf.Max(0, shipment.requiredAmount1 - available1);
+            int toAdd2 = Mathf.Max(0, shipment.requiredAmount2 - available2);
+
+            CounterData.AddToCounter(shipment.cropKey1, toAdd1);
+            CounterData.AddToCounter(shipment.cropKey2, toAdd2);
+        }
+
+        CounterData.CounterDisplayUpdater.RefreshAllDisplays();
+    }
+
+    void UpdateShipmentUI(int index, Shipment shipment)
+    {
+        string label1 = CounterData.GetLabel(shipment.cropKey1);
+        string label2 = CounterData.GetLabel(shipment.cropKey2);
+
+        (int progress1, int progress2) = CounterData.GetShipmentProgress(index);
+
+        int clamped1 = Mathf.Min(progress1, shipment.requiredAmount1);
+        int clamped2 = Mathf.Min(progress2, shipment.requiredAmount2);
+
+        bool enough1 = clamped1 >= shipment.requiredAmount1;
+        bool enough2 = clamped2 >= shipment.requiredAmount2;
+
+        string color1 = enough1 ? "#00FF00" : "#FFFFFF";
+        string color2 = enough2 ? "#00FF00" : "#FFFFFF";
+
+        shipment.progressText1.text = $"{label1} <color={color1}>{clamped1}/{shipment.requiredAmount1}</color>";
+        shipment.progressText2.text = $"{label2} <color={color2}>{clamped2}/{shipment.requiredAmount2}</color>";
+
+        if (CounterData.IsShipmentMarkedCompleted(index))
+        {
+            shipment.completionText.text = "<color=#00FF00>1/1</color>";
+        }
+        else
+        {
+            shipment.completionText.text = "0/1";
         }
     }
 
-    private void UpdateProgressTexts(int shipmentIndex)
+
+    void UpdateAllUI()
     {
-        // Update the progress text for the corresponding shipment
-        if (shipmentIndex == 0 && progressText1 != null)
+        for (int i = 0; i < shipments.Count; i++)
         {
-            progressText1.text = "1/1"; // Update progress to 1/1 for completed shipment
-        }
-        else if (shipmentIndex == 1 && progressText2 != null)
-        {
-            progressText2.text = "1/1";
-        }
-        else if (shipmentIndex == 2 && progressText3 != null)
-        {
-            progressText3.text = "1/1";
+            UpdateShipmentUI(i, shipments[i]);
+            shipments[i].completionText.text = shipments[i].IsCompleted(i) ? "<color=#00FF00>1/1</color>" : "0/1";
+
         }
     }
 
-    private bool AllShipmentsCompleted()
+    bool AllShipmentsCompleted()
     {
-        // Check if all shipments have been completed
-        foreach (bool completed in shipmentCompleted)
+        for (int i = 0; i < shipments.Count; i++)
         {
-            if (!completed) return false;
+            if (!shipments[i].IsCompleted(i)) return false;
         }
         return true;
     }
 
-    private void EndGame()
+    IEnumerator EndGameSequence()
     {
-        Debug.Log("All shipments completed! You win!");
-        // Implement game end logic, like showing a win screen or ending the game
-        // Example: 
-        // SceneManager.LoadScene("GameOverScene");
-        // Or show a message:
-        if (progressText1 != null) progressText1.text = "You Win!";
-        if (progressText2 != null) progressText2.text = "You Win!";
-        if (progressText3 != null) progressText3.text = "You Win!";
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("EndScene");
     }
 }

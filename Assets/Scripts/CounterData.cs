@@ -12,6 +12,25 @@ public static class CounterData
 
     private static float lastEventTime = -999f;
 
+    private static Dictionary<int, (int progress1, int progress2)> shipmentProgress = new Dictionary<int, (int, int)>();
+
+    public static (int, int) GetShipmentProgress(int index)
+    {
+        if (!shipmentProgress.ContainsKey(index))
+            shipmentProgress[index] = (0, 0);
+        return shipmentProgress[index];
+    }
+
+    public static void SetShipmentProgress(int index, int progress1, int progress2)
+    {
+        shipmentProgress[index] = (progress1, progress2);
+    }
+
+    public static void ResetAllShipmentProgress()
+    {
+        shipmentProgress.Clear();
+    }
+
     public static void SetLastEventTime(float time)
     {
         lastEventTime = time;
@@ -74,12 +93,6 @@ public static class CounterData
         return new List<string>(counters.Keys);
     }
 
-    public static void ResetAllCounters()
-    {
-        counters.Clear();
-        InitializeCounters();
-    }
-
     public static class CounterDisplayUpdater
     {
         public static void RefreshAllDisplays()
@@ -99,6 +112,54 @@ public static class CounterData
             counters[key] = 0;
         }
     }
+
+    // Clears all crop counters
+    public static void ResetAllCounters()
+    {
+        counters.Clear();
+        InitializeCounters();
+    }
+
+
+    // Clears cooldowns — just resets lastEventTime
+    public static void ClearCooldowns()
+    {
+        lastEventTime = -999f;
+        Debug.Log("[CounterData] Cooldowns cleared.");
+    }
+
+    public static void ResetAll()
+    {
+        ResetAllCounters();
+        ClearCooldowns();
+        ResetAllShipmentProgress();
+        // Add other resets here if needed
+    }
+
+
+    public static void ClearShipmentProgress()
+    {
+        // unused
+    }
+
+    private static HashSet<int> completedShipments = new HashSet<int>();
+
+    public static void MarkShipmentCompleted(int index)
+    {
+        completedShipments.Add(index);
+    }
+
+    public static bool IsShipmentMarkedCompleted(int index)
+    {
+        return completedShipments.Contains(index);
+    }
+
+    public static void ResetShipments()
+    {
+        completedShipments.Clear();
+    }
+
+
     public static void EnsureCounterExists(string key)
     {
         if (!counters.ContainsKey(key))

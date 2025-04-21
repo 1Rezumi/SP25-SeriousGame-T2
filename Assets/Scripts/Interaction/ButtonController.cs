@@ -39,7 +39,7 @@ public class ButtonController : MonoBehaviour
         {
             pair.meterScript.enabled = true; // Enable meter script.
             pair.meterScript.StartMeter();
-            pair.meterScript.buttonController = this; // assign reference for enabling button later
+            pair.meterScript.buttonController = this;
         }
 
         
@@ -49,7 +49,7 @@ public class ButtonController : MonoBehaviour
     {
         if (actionButton != null)
         {
-            actionButton.interactable = true; // renable button after the timer is done
+            actionButton.interactable = true;
         }
             
     }

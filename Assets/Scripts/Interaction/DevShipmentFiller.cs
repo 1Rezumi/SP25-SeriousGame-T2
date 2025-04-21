@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class DevShipmentFiller : MonoBehaviour
 {
+    // this whole scirpt is used to test the shipment scene, it won't be used in the final product.
+
     [Header("Crop Requirements for Shipment")]
-    public string cropKey1; // For example: "Crop1"
+    public string cropKey1;
     public int requiredAmount1;
 
-    public string cropKey2; // For example: "Crop2"
+    public string cropKey2;
     public int requiredAmount2;
 
-    public string cropKey3; // For example: "Crop3"
+    public string cropKey3;
     public int requiredAmount3;
 
     public void FillCropsForShipment()
@@ -18,24 +20,22 @@ public class DevShipmentFiller : MonoBehaviour
         FillCrop(cropKey2, requiredAmount2);
         FillCrop(cropKey3, requiredAmount3);
 
-        // Optionally update UI counters
         foreach (var display in FindObjectsOfType<CounterDisplay>())
         {
             display.UpdateCounter();
         }
     }
 
+
+
     private void FillCrop(string cropKey, int requiredAmount)
     {
         if (string.IsNullOrEmpty(cropKey)) return;
 
-        // Get current amount of crops in inventory
         int currentAmount = CounterData.GetCounter(cropKey);
 
-        // Check how much we need to fill the shipment requirement
         int amountToAdd = Mathf.Max(0, requiredAmount - currentAmount);
 
-        // If we need to add crops, fill them
         if (amountToAdd > 0)
         {
             CounterData.AddToCounter(cropKey, amountToAdd);
